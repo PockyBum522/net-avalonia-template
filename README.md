@@ -6,3 +6,7 @@ My personal template to spin up a new WPF .NET 7+ solution
 * MVVM Using MVVM.Community.Toolkit
 * Autofac
 * Serilog
+
+# Note to self on testing
+
+dotnet new install "D:\source\repos\PockyBum522 Github\dotnet-new-wpf-template" --force && dotnet new pockywpfmvvm -o "NewProjectName"

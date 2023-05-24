@@ -8,6 +8,7 @@ using Serilog;
 using Unique.Id.To.Be.Replaced.Core;
 using Unique.Id.To.Be.Replaced.Core.Logic.WindowsHelpers;
 using Unique.Id.To.Be.Replaced.UI.Interfaces;
+using Unique.Id.To.Be.Replaced.UI.WindowResources.MainWindow;
 using Unique.Id.To.Be.Replaced.UI.WindowResources.SettingsWindow;
 
 namespace Unique.Id.To.Be.Replaced.UI.TrayIcon;
@@ -18,20 +19,33 @@ namespace Unique.Id.To.Be.Replaced.UI.TrayIcon;
 public partial class TrayIconViewModel : ObservableObject, ITrayIconViewModel
 {
     private readonly ILogger _logger;
+
+    private readonly MainWindowViewModel _mainWindowViewModel;
+    private readonly MainWindow _mainWindow;
+    
     //private readonly ISettingsApplicationLocal _settingsAppLocal;
     
     private readonly SettingsWindow _settingsWindow;
-    
+
     /// <summary>
     /// Constructor for dependency injection
     /// </summary>
     /// <param name="logger">Injected logger to use</param>
+    /// <param name="mainWindow">Main window view for the application</param>
     /// <param name="settingsViewModel">Injected settings window viewmodel to use</param>
+    /// <param name="mainWindowViewModel">Main window ViewModel for the application</param>
     // /// <param name="settingsAppLocal">Injected application local settings to use</param>
-    public TrayIconViewModel(ILogger logger, SettingsViewModel settingsViewModel) //, ISettingsApplicationLocal settingsAppLocal)
+    public TrayIconViewModel(ILogger logger,
+        MainWindowViewModel mainWindowViewModel,
+        MainWindow mainWindow,
+        SettingsViewModel settingsViewModel) //, ISettingsApplicationLocal settingsAppLocal)
     {
         _logger = logger;
         
+        _mainWindow = mainWindow;
+        _mainWindowViewModel = mainWindowViewModel;
+        _mainWindow.DataContext = _mainWindowViewModel;
+
         _logger.Information("Initializing Tray Icon View");
         
         //_settingsAppLocal = settingsAppLocal;
@@ -45,6 +59,12 @@ public partial class TrayIconViewModel : ObservableObject, ITrayIconViewModel
         
         _logger.Information("Hid settings window, tray icon init finished");
     }
+    
+    /// <summary>
+    /// Command to show the settings window
+    /// </summary>
+    [RelayCommand]
+    private void OpenMainWindow() => _mainWindow.Show();
     
     /// <summary>
     /// Command to exit the application completely

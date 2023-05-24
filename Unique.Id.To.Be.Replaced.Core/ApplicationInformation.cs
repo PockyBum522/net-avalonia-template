@@ -16,6 +16,24 @@ public static class ApplicationInformation
             if (_hasApplicationNameBeenSet) return;
 
             _applicationFriendlyName = value;
+
+            _hasApplicationNameBeenSet = true;
+        } 
+    }
+    
+    /// <summary>
+    /// Friendly name for the application. Can only be set once. That should happen in App.xaml.cs
+    /// </summary>
+    public static bool RunAsTrayIconApplication
+    {
+        get => _runAsTrayIconApplication;
+        set
+        {
+            if (_hasRunAsTrayIconApplicationBeenSet) return;
+
+            _runAsTrayIconApplication = value;
+            
+            _hasRunAsTrayIconApplicationBeenSet = true;
         } 
     }
 
@@ -25,5 +43,8 @@ public static class ApplicationInformation
     public static string ApplicationNameNoSpaces => ApplicationFriendlyName.Replace(" ", "");
 
     private static string _applicationFriendlyName = "Unique.Id.To.Be.Replaced";
-    private static bool _hasApplicationNameBeenSet = false;
+    private static bool _hasApplicationNameBeenSet;
+
+    private static bool _runAsTrayIconApplication = true;
+    private static bool _hasRunAsTrayIconApplicationBeenSet;
 }

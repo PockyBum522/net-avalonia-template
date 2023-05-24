@@ -53,13 +53,13 @@ public partial class App
         // SET THESE TWO LINES
         // BEFORE RUNNING THE APPLICATION FOR THE FIRST TIME:
         
-        const bool runAsTrayIconApplication = true;
+        ApplicationInformation.RunAsTrayIconApplication = true;
         
         ApplicationInformation.ApplicationFriendlyName = "Unique.Id.To.Be.Replaced"; 
         
         // AND THEN DELETE THE THROW LINE ABOVE...
         
-        if (runAsTrayIconApplication)
+        if (ApplicationInformation.RunAsTrayIconApplication)
         {
             // Start TrayIcon
             var unused = _scope.Resolve<ITrayIcon>();
