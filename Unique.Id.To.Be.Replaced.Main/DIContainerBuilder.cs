@@ -6,12 +6,10 @@ using System.Windows.Threading;
 using Autofac;
 using Config.Net;
 using JetBrains.Annotations;
-using Newtonsoft.Json;
 using Serilog;
 using Unique.Id.To.Be.Replaced.Core;
 using Unique.Id.To.Be.Replaced.Core.Interfaces;
 using Unique.Id.To.Be.Replaced.Core.Logic.Application;
-using Unique.Id.To.Be.Replaced.Core.Models;
 using Unique.Id.To.Be.Replaced.UI.WindowResources.MainWindow;
 
 namespace Unique.Id.To.Be.Replaced.Main;

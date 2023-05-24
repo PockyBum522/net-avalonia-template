@@ -1,7 +1,4 @@
-﻿using System;
-using System.IO;
-
-namespace Unique.Id.To.Be.Replaced.Core;
+﻿namespace Unique.Id.To.Be.Replaced.Core;
 
 /// <summary>
 /// Contains the few paths for this application that must be hardcoded

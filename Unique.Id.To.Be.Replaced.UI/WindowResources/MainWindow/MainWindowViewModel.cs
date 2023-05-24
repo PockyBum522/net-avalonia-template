@@ -1,13 +1,7 @@
-﻿using System;
-using System.Runtime.Versioning;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Serilog;
 using Unique.Id.To.Be.Replaced.Core.Interfaces;
-using Unique.Id.To.Be.Replaced.Core.Models;
-using Unique.Id.To.Be.Replaced.UI.WpfHelpers;
 
 namespace Unique.Id.To.Be.Replaced.UI.WindowResources.MainWindow;
 
