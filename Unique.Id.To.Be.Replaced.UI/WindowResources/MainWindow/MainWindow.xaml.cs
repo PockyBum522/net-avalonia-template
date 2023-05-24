@@ -1,4 +1,4 @@
-﻿namespace SimpleSerialLoggerGui.UI.WindowResources.MainWindow;
+﻿namespace Unique.Id.To.Be.Replaced.UI.WindowResources.MainWindow;
 
 ///<summary>
 ///Interaction logic for MainWindow.xaml

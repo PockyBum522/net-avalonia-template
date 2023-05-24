@@ -5,11 +5,11 @@ using System.Windows.Input;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Serilog;
-using SimpleSerialLoggerGui.Core.Interfaces;
-using SimpleSerialLoggerGui.Core.Models;
-using SimpleSerialLoggerGui.UI.WpfHelpers;
+using Unique.Id.To.Be.Replaced.Core.Interfaces;
+using Unique.Id.To.Be.Replaced.Core.Models;
+using Unique.Id.To.Be.Replaced.UI.WpfHelpers;
 
-namespace SimpleSerialLoggerGui.UI.WindowResources.MainWindow;
+namespace Unique.Id.To.Be.Replaced.UI.WindowResources.MainWindow;
 
 /// <summary>
 /// The ViewModel for MainWindow

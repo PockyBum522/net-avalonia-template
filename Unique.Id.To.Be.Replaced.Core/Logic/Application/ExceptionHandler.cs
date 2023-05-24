@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Serilog;
 
-namespace SimpleSerialLoggerGui.Core.Logic.Application;
+namespace Unique.Id.To.Be.Replaced.Core.Logic.Application;
 
 /// <summary>
 /// Sets up unhandled exception listeners and logging for such

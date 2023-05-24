@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace SimpleSerialLoggerGui.Core;
+namespace Unique.Id.To.Be.Replaced.Core;
 
 /// <summary>
 /// Contains the few paths for this application that must be hardcoded
@@ -12,5 +12,5 @@ public static class ApplicationInformation
     /// Friendly name for the application
     /// </summary>
     public static string ApplicationName =>
-        "Simple Serial Logger Gui";
+        "Unique.Id.To.Be.Replaced";
 }

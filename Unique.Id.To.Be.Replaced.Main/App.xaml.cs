@@ -1,10 +1,10 @@
 ﻿using System.Runtime.Versioning;
 using System.Windows;
 using Autofac;
-using SimpleSerialLoggerGui.Core.Logic.Application;
-using SimpleSerialLoggerGui.UI.WindowResources.MainWindow;
+using Unique.Id.To.Be.Replaced.Core.Logic.Application;
+using Unique.Id.To.Be.Replaced.UI.WindowResources.MainWindow;
 
-namespace SimpleSerialLoggerGui.Main;
+namespace Unique.Id.To.Be.Replaced.Main;
 
 /// <summary>
 /// Interaction logic for App.xaml

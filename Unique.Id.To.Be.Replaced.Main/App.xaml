@@ -1,4 +1,4 @@
-﻿<Application x:Class="SimpleSerialLoggerGui.Main.App"
+﻿<Application x:Class="Unique.Id.To.Be.Replaced.Main.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Application.Resources>

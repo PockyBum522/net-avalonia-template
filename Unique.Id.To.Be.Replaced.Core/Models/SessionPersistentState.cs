@@ -1,7 +1,7 @@
 ﻿using System;
 using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace SimpleSerialLoggerGui.Core.Models;
+namespace Unique.Id.To.Be.Replaced.Core.Models;
 
 /// <summary>
 /// This holds our main window checkboxes state and available installers loaded from json

@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace SimpleSerialLoggerGui.UI.WpfHelpers;
+namespace Unique.Id.To.Be.Replaced.UI.WpfHelpers;
 
 /// <summary>
 /// Helpers for WPF controls

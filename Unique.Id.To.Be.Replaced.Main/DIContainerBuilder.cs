@@ -8,13 +8,13 @@ using Config.Net;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
 using Serilog;
-using SimpleSerialLoggerGui.Core;
-using SimpleSerialLoggerGui.Core.Interfaces;
-using SimpleSerialLoggerGui.Core.Logic.Application;
-using SimpleSerialLoggerGui.Core.Models;
-using SimpleSerialLoggerGui.UI.WindowResources.MainWindow;
+using Unique.Id.To.Be.Replaced.Core;
+using Unique.Id.To.Be.Replaced.Core.Interfaces;
+using Unique.Id.To.Be.Replaced.Core.Logic.Application;
+using Unique.Id.To.Be.Replaced.Core.Models;
+using Unique.Id.To.Be.Replaced.UI.WindowResources.MainWindow;
 
-namespace SimpleSerialLoggerGui.Main;
+namespace Unique.Id.To.Be.Replaced.Main;
 
 /// <summary>
 /// Builds the container for the local application dependencies. This is then passed to TeakTools.Common
@@ -78,7 +78,7 @@ public class DiContainerBuilder
 
         // Otherwise, if it is null, make new logger:
         _logger = new LoggerConfiguration()
-            .Enrich.WithProperty("SimpleSerialLoggerGuiApplication", "SimpleSerialLoggerGuiSerilogContext")
+            .Enrich.WithProperty("Unique.Id.To.Be.ReplacedApplication", "Unique.Id.To.Be.ReplacedSerilogContext")
             .MinimumLevel.Debug()
             .WriteTo.File(ApplicationPaths.LogPath, rollingInterval: RollingInterval.Day)
             .WriteTo.Console()

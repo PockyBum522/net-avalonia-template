@@ -1,4 +1,4 @@
-﻿namespace SimpleSerialLoggerGui.Core.Interfaces;
+﻿namespace Unique.Id.To.Be.Replaced.Core.Interfaces;
 
 
 /// <summary>
