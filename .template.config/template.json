@@ -11,5 +11,26 @@
         "language": "C#",
         "type": "solution"
     },
-    "preferNameDirectory": true
+    "preferNameDirectory": true,
+    "sources": [
+        {
+            "source": "./",
+            "target": "./",
+            "include": [ "**/*" ],
+            "exclude": [
+                "**/[Bb]in/**",
+                "**/[Oo]bj/**",
+                "**/.template.config",
+                "**/*.filelist",
+                "**/*.user",
+                "**/*.lock.json",
+                "**/.git/**",
+                "**/*.nuspec",
+                "**/.idea/**"
+            ],
+            "copyOnly":[
+                "**/node_modules/**"
+            ]
+        }
+    ]
 }
