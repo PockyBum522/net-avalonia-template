@@ -1,4 +1,5 @@
-﻿using System.Runtime.Versioning;
+﻿using System;
+using System.Runtime.Versioning;
 using System.Windows;
 using Autofac;
 using Unique.Id.To.Be.Replaced.Core.Logic.Application;

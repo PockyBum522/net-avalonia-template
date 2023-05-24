@@ -10,6 +10,8 @@ using Serilog;
 using Unique.Id.To.Be.Replaced.Core;
 using Unique.Id.To.Be.Replaced.Core.Interfaces;
 using Unique.Id.To.Be.Replaced.Core.Logic.Application;
+using Unique.Id.To.Be.Replaced.UI.Interfaces;
+using Unique.Id.To.Be.Replaced.UI.TrayIcon;
 using Unique.Id.To.Be.Replaced.UI.WindowResources.MainWindow;
 
 namespace Unique.Id.To.Be.Replaced.Main;
@@ -126,6 +128,9 @@ public class DiContainerBuilder
     private void RegisterUiDependencies()
     {
         _builder.RegisterInstance(Dispatcher.CurrentDispatcher).AsSelf().SingleInstance();
+        
+        _builder.RegisterType<TrayIconViewModel>().AsSelf().SingleInstance();
+        _builder.RegisterType<TrayIconMain>().As<ITrayIcon>().SingleInstance();
         
         _builder.RegisterType<MainWindowViewModel>().AsSelf().SingleInstance();
         _builder.RegisterType<MainWindow>().AsSelf().SingleInstance();

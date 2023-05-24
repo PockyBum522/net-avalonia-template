@@ -1,3 +1,4 @@
+using CommunityToolkit.Mvvm.ComponentModel;
 using Unique.Id.To.Be.Replaced.UI.Interfaces;
 
 namespace Unique.Id.To.Be.Replaced.UI.TrayIcon;
@@ -5,6 +6,7 @@ namespace Unique.Id.To.Be.Replaced.UI.TrayIcon;
 /// <summary>
 /// TrayIconMain class for setting up  
 /// </summary>
+[ObservableObject]
 public partial class TrayIconMain : ITrayIcon
 {
     /// <summary>
