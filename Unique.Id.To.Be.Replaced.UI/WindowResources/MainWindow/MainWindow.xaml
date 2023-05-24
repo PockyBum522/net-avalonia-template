@@ -12,12 +12,6 @@
         Style="{StaticResource StandardWindow}"
         Title="Unique.Id.To.Be.Replaced" Height="600" Width="1400"
         Background="#222222">
-
-    <b:Interaction.Triggers>
-        <b:EventTrigger EventName="Closing">
-            <b:InvokeCommandAction Command="{Binding MainWindowOnClosingCommand}"/>
-        </b:EventTrigger>  
-    </b:Interaction.Triggers>  
     
     <Grid>
         <Grid.RowDefinitions>

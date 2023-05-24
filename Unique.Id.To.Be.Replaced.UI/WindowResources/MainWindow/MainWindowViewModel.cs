@@ -1,6 +1,9 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.ComponentModel;
+using System.Windows;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Serilog;
+using Unique.Id.To.Be.Replaced.Core;
 
 namespace Unique.Id.To.Be.Replaced.UI.WindowResources.MainWindow;
 
@@ -38,5 +41,24 @@ public partial class MainWindowViewModel : ObservableObject
     {
         _logger.Information("Running {ThisName}, this is just an example message to show how to use MVVM behaviors from the XAML",
             System.Reflection.MethodBase.GetCurrentMethod()?.Name);
+    }
+    
+    /// <summary>
+    /// This is so we can just hide the window if we're running in Notification Tray Icon app mode
+    /// </summary>
+    /// <param name="sender">The main window</param>
+    /// <param name="e">Cancel Event Args from the event</param>
+    public void OnWindowClosing(object? sender, CancelEventArgs e) 
+    {
+        _logger.Information("Running {ThisName}, this is just an example message to show how to use MVVM behaviors from the XAML",
+            System.Reflection.MethodBase.GetCurrentMethod()?.Name);
+
+        if (!ApplicationInformation.RunAsTrayIconApplication) return;
+        
+        e.Cancel = true;
+
+        if (sender is null) return;
+        
+        ((Window)sender).Hide();
     }
 }

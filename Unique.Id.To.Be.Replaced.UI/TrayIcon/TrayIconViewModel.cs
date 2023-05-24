@@ -45,6 +45,7 @@ public partial class TrayIconViewModel : ObservableObject, ITrayIconViewModel
         _mainWindow = mainWindow;
         _mainWindowViewModel = mainWindowViewModel;
         _mainWindow.DataContext = _mainWindowViewModel;
+        _mainWindow.Closing += _mainWindowViewModel.OnWindowClosing;
 
         _logger.Information("Initializing Tray Icon View");
         
