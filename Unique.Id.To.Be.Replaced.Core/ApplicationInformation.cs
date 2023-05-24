@@ -6,8 +6,24 @@
 public static class ApplicationInformation
 {
     /// <summary>
-    /// Friendly name for the application
+    /// Friendly name for the application. Can only be set once. That should happen in App.xaml.cs
     /// </summary>
-    public static string ApplicationName =>
-        "Unique.Id.To.Be.Replaced";
+    public static string ApplicationFriendlyName
+    {
+        get => _applicationFriendlyName;
+        set
+        {
+            if (_hasApplicationNameBeenSet) return;
+
+            _applicationFriendlyName = value;
+        } 
+    }
+
+    /// <summary>
+    /// Name for the application but without spaces, derived from ApplicationFriendlyName
+    /// </summary>
+    public static string ApplicationNameNoSpaces => ApplicationFriendlyName.Replace(" ", "");
+
+    private static string _applicationFriendlyName = "Unique.Id.To.Be.Replaced";
+    private static bool _hasApplicationNameBeenSet = false;
 }

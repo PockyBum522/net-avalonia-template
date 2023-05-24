@@ -1,11 +1,9 @@
-﻿using System.Windows;
-
-namespace Unique.Id.To.Be.Replaced.UI.WindowResources.SettingsWindow;
+﻿namespace Unique.Id.To.Be.Replaced.UI.WindowResources.SettingsWindow;
 
 /// <summary>
 /// Window to display settings and allow user to change settings
 /// </summary>
-public partial class SettingsWindow : Window
+public partial class SettingsWindow
 {
     /// <summary>
     /// Constructor with no injection

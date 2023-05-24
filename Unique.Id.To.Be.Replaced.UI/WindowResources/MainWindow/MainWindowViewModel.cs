@@ -1,7 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Serilog;
-using Unique.Id.To.Be.Replaced.Core.Interfaces;
 
 namespace Unique.Id.To.Be.Replaced.UI.WindowResources.MainWindow;
 
@@ -13,19 +12,17 @@ public partial class MainWindowViewModel : ObservableObject
     [ObservableProperty] private string _textRunningAsUsernameMessage = "";
     
     private readonly ILogger _logger;
-    private readonly ISettingsApplicationLocal _settingsApplicationLocal;
+    //private readonly ISettingsApplicationLocal _settingsApplicationLocal;
 
     /// <summary>
     /// Constructor for dependency injection
     /// </summary>
     /// <param name="logger">Injected ILogger to use</param>
-    /// <param name="settingsApplicationLocal">ISettingsApplicationLocal proxy object from Config.net that was set up in DIContainerBuilder.cs</param>
-    public MainWindowViewModel(
-        ILogger logger,
-        ISettingsApplicationLocal settingsApplicationLocal)
+    // /// <param name="settingsApplicationLocal">ISettingsApplicationLocal proxy object from Config.net that was set up in DIContainerBuilder.cs</param>
+    public MainWindowViewModel(ILogger logger) //, ISettingsApplicationLocal settingsApplicationLocal)
     {
         _logger = logger;
-        _settingsApplicationLocal = settingsApplicationLocal;
+        // _settingsApplicationLocal = settingsApplicationLocal;
 
         //TextRunningAsUsernameMessage = $"Running As DomainUser: {Environment.UserDomainName} | User: {Environment.UserName}";
     }

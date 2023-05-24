@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Unique.Id.To.Be.Replaced.Core.Interfaces;
 
 namespace Unique.Id.To.Be.Replaced.UI.WindowResources.SettingsWindow;
 
@@ -20,15 +19,15 @@ public partial class SettingsViewModel : ObservableObject
     public string DeviceClassGuid { get; set; } = "";
     
     // Private
-    private readonly ISettingsApplicationLocal _settingsAppLocal;
+    //private readonly ISettingsApplicationLocal _settingsAppLocal;
     
     /// <summary>
     /// Constructor for dependency injection and checking that settings are initiliazed
     /// </summary>
-    /// <param name="settingsAppLocal">Injected application local settings to use</param>
-    public SettingsViewModel(ISettingsApplicationLocal settingsAppLocal)
+    // /// <param name="settingsAppLocal">Injected application local settings to use</param>
+    public SettingsViewModel() //ISettingsApplicationLocal settingsAppLocal)
     {
-        _settingsAppLocal = settingsAppLocal;
+        //_settingsAppLocal = settingsAppLocal;
         
         InitializeFromConfig();
     }

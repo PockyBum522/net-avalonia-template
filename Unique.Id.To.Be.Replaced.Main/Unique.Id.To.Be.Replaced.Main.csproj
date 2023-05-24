@@ -7,6 +7,7 @@
         <UseWPF>true</UseWPF>
         <ApplicationManifest>app.manifest</ApplicationManifest>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <ApplicationIcon>Icons/AppIcon.ico</ApplicationIcon>
         <Configurations>Debug;Release</Configurations>
         <Platforms>x64</Platforms>
         <AssemblyVersion>0.00.01</AssemblyVersion>
@@ -127,6 +128,17 @@
     <ItemGroup>
       <Page Remove="Themes\SelenMetroDark\ListViewStyles.xaml" />
       <Content Include="Themes\SelenMetroDark\ListViewStyles.xaml">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Icons\AppIcon.ico" />
+      <Content Include="Icons\AppIcon.ico">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Icons\TrayIcon.ico" />
+      <Content Include="Icons\TrayIcon.ico">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
     </ItemGroup>

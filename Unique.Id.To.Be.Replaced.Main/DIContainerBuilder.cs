@@ -13,6 +13,7 @@ using Unique.Id.To.Be.Replaced.Core.Logic.Application;
 using Unique.Id.To.Be.Replaced.UI.Interfaces;
 using Unique.Id.To.Be.Replaced.UI.TrayIcon;
 using Unique.Id.To.Be.Replaced.UI.WindowResources.MainWindow;
+using Unique.Id.To.Be.Replaced.UI.WindowResources.SettingsWindow;
 
 namespace Unique.Id.To.Be.Replaced.Main;
 
@@ -129,7 +130,10 @@ public class DiContainerBuilder
     {
         _builder.RegisterInstance(Dispatcher.CurrentDispatcher).AsSelf().SingleInstance();
         
-        _builder.RegisterType<TrayIconViewModel>().AsSelf().SingleInstance();
+        _builder.RegisterType<SettingsViewModel>().AsSelf().SingleInstance();
+        _builder.RegisterType<SettingsWindow>().AsSelf().SingleInstance();
+
+        _builder.RegisterType<TrayIconViewModel>().As<ITrayIconViewModel>().SingleInstance();
         _builder.RegisterType<TrayIconMain>().As<ITrayIcon>().SingleInstance();
         
         _builder.RegisterType<MainWindowViewModel>().AsSelf().SingleInstance();

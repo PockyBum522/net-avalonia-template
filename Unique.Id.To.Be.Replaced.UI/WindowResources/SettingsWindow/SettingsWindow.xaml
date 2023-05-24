@@ -88,14 +88,14 @@
             <Button Content="Save Settings" 
                     Width="110" 
                     Padding="6" 
-                    Command="{ Binding CommandSaveSettings }"
+                    Command="{ Binding SaveSettingsCommand }"
                     CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" />
             
             <Button Content="Cancel" 
                     Width="110" 
                     Padding="6" 
                     Margin="10,0,0,0"  
-                    Command="{ Binding CommandCancel }" 
+                    Command="{ Binding CancelCommand }" 
                     CommandParameter="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}" />
             
         </StackPanel>

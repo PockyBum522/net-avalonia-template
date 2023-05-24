@@ -8,19 +8,22 @@
              mc:Ignorable="d"
              d:DataContext="{d:DesignInstance Type=trayIcon:TrayIconViewModel, IsDesignTimeCreatable=True}"
              d:DesignHeight="300" d:DesignWidth="300"
-             Background="#222222">
+             Background="#222222"
+             Foreground="#EEEEEE">
     
             <!-- ReSharper disable Xaml.StaticResourceNotResolved because mainTrayIcon comes from MainWindow just before InitializeComponent() -->
             <tb:TaskbarIcon 
-                x:Name="QueueMainTrayIcon"
+                x:Name="ApplicationMainTrayIcon"
                 Icon="{StaticResource MainTrayIcon}" 
                 Visibility="Visible"
-                ToolTipText="HDMI Audio Sleep Repairer" 
+                ToolTipText="Unique.Id.To.Be.Replaced" 
                 d:DataContext="{d:DesignInstance Type=trayIcon:TrayIconViewModel, IsDesignTimeCreatable=True}">
                 <!-- ReSharper restore Xaml.StaticResourceNotResolved -->
                 
                 <tb:TaskbarIcon.ContextMenu>
-                    <ContextMenu>
+                    <ContextMenu
+                        Background="#222222"
+                        Foreground="#EEEEEE">
                         
                         <!-- <MenuItem Header="Disable Audio Device"  -->
                         <!--           Command="{Binding CommandDisableDevice}" /> -->
@@ -30,13 +33,13 @@
                         <!-- -->
                         <!-- <Separator /> -->
                         
-                        <MenuItem Header="Open Log" Command="{Binding CommandOpenLogFileInVsCode}" />
+                        <MenuItem Header="Open Log" Command="{Binding OpenLogfileInVscodeCommand}" Foreground="#EEEEEE" />
                         
-                        <MenuItem Header="Open Settings" Command="{Binding CommandOpenSettingsWindow}" />
+                        <MenuItem Header="Open Settings" Command="{Binding OpenSettingsWindowCommand}" Foreground="#EEEEEE" />
                         
                         <Separator />
                         
-                        <MenuItem Header="Exit" Command="{Binding CommandExitApplication}" />
+                        <MenuItem Header="Exit" Command="{Binding ExitApplicationCommand}" />
                         
                     </ContextMenu>
                 </tb:TaskbarIcon.ContextMenu>

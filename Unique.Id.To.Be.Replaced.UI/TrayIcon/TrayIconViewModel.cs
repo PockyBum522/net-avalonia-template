@@ -6,7 +6,6 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Serilog;
 using Unique.Id.To.Be.Replaced.Core;
-using Unique.Id.To.Be.Replaced.Core.Interfaces;
 using Unique.Id.To.Be.Replaced.Core.Logic.WindowsHelpers;
 using Unique.Id.To.Be.Replaced.UI.Interfaces;
 using Unique.Id.To.Be.Replaced.UI.WindowResources.SettingsWindow;
@@ -19,7 +18,7 @@ namespace Unique.Id.To.Be.Replaced.UI.TrayIcon;
 public partial class TrayIconViewModel : ObservableObject, ITrayIconViewModel
 {
     private readonly ILogger _logger;
-    private readonly ISettingsApplicationLocal _settingsAppLocal;
+    //private readonly ISettingsApplicationLocal _settingsAppLocal;
     
     private readonly SettingsWindow _settingsWindow;
     
@@ -28,14 +27,14 @@ public partial class TrayIconViewModel : ObservableObject, ITrayIconViewModel
     /// </summary>
     /// <param name="logger">Injected logger to use</param>
     /// <param name="settingsViewModel">Injected settings window viewmodel to use</param>
-    /// <param name="settingsAppLocal">Injected application local settings to use</param>
-    public TrayIconViewModel(ILogger logger, SettingsViewModel settingsViewModel, ISettingsApplicationLocal settingsAppLocal)
+    // /// <param name="settingsAppLocal">Injected application local settings to use</param>
+    public TrayIconViewModel(ILogger logger, SettingsViewModel settingsViewModel) //, ISettingsApplicationLocal settingsAppLocal)
     {
         _logger = logger;
         
         _logger.Information("Initializing Tray Icon View");
         
-        _settingsAppLocal = settingsAppLocal;
+        //_settingsAppLocal = settingsAppLocal;
 
         _settingsWindow = new()
         {

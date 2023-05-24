@@ -17,7 +17,7 @@ public static class ApplicationPaths
             "Users",
             "Public",
             "Documents",
-            ApplicationInformation.ApplicationName,
+            ApplicationInformation.ApplicationFriendlyName,
             "Logs",
             "Application");
         
@@ -30,7 +30,7 @@ public static class ApplicationPaths
             "Users",
             "Public",
             "Documents",
-            ApplicationInformation.ApplicationName,
+            ApplicationInformation.ApplicationFriendlyName,
             "Settings",
             "GeneralSettings.ini");
 
