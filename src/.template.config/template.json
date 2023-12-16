@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "PockyBum522 (David S)",
+    "classifications": [ "Windows", "Avalonia", "MVVM" ],
+    "identity": "PockyBum522.Avalonia.AppTemplate",
+    "name": "PockyBum522 Avalonia cross-platform App Solution",
+    "description": "PockyBum522 new avalonia cross-platform template with logging",
+    "shortName": "pockyavalonia",
+    "sourceName": "Unique.Id.To.Be.Replaced",
+    "tags": {
+        "language": "C#",
+        "type": "solution"
+    },
+    "preferNameDirectory": true,
+    "sources": [
+        {
+            "source": "./",
+            "target": "./",
+            "exclude": [
+				"**/[Bb]in/**", 
+				"**/[Oo]bj/**", 
+				".template.config/**/*", 
+				"**/*.filelist", 
+				"**/*.user", 
+				"**/*.lock.json",
+				".idea/**"
+            ],
+            "copyOnly":[
+                "**/node_modules/**"
+            ]
+        }
+    ]
+}
