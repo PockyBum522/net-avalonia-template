@@ -3,12 +3,10 @@ My personal template to spin up a new Avalonia .NET 7+ solution
 
 # Features
 
+~* Autofac~ (Need to re-add)
+
 * Dark theme (I think Avalonia does this on its own.)
-
-~* Autofac~
-
 * MVVM Using MVVM.Community.Toolkit
-
 * Serilog
 
 # Note to self on testing
