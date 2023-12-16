@@ -2,7 +2,8 @@
 My personal template to spin up a new Avalonia .NET 7+ solution
 
 # Features
-~* Dark theme (Heavily modified SelenMetroDark, I don't remember where I originally got it.)~
+
+* Dark theme (I think Avalonia does this on its own.)
 
 ~* Autofac~
 
