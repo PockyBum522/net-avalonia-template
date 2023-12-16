@@ -1,43 +1,45 @@
-REM -------========== Unique.Id.To.Be.Replaced.Core ==========-------
+REM Fix this before using. It may delete everything as it currently is
 
-set folder=".\Unique.Id.To.Be.Replaced.Core\bin"
+REM REM -------========== Unique.Id.To.Be.Replaced.Core ==========-------
 
-cd /d %folder%
+REM set folder=".\Unique.Id.To.Be.Replaced.Core\bin"
 
-for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q 2>NUL || del "%%i" /s/q >NUL )
+REM cd /d %folder%
 
-set folder="..\obj"
+REM for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q 2>NUL || del "%%i" /s/q >NUL )
 
-cd /d %folder%
+REM set folder="..\obj"
 
-for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q 2>NUL || del "%%i" /s/q >NUL )
+REM cd /d %folder%
 
-REM  -------========== Unique.Id.To.Be.Replaced.Main ==========-------
+REM for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q 2>NUL || del "%%i" /s/q >NUL )
 
-set folder="..\..\Unique.Id.To.Be.Replaced.Main\bin"
+REM REM  -------========== Unique.Id.To.Be.Replaced.Main ==========-------
 
-cd /d %folder%
+REM set folder="..\..\Unique.Id.To.Be.Replaced.Main\bin"
 
-for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q 2>NUL || del "%%i" /s/q >NUL )
+REM cd /d %folder%
 
-set folder="..\obj"
+REM for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q 2>NUL || del "%%i" /s/q >NUL )
 
-cd /d %folder%
+REM set folder="..\obj"
 
-for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q 2>NUL || del "%%i" /s/q >NUL )
+REM cd /d %folder%
 
-REM  -------========== Unique.Id.To.Be.Replaced.UI ==========-------
+REM for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q 2>NUL || del "%%i" /s/q >NUL )
 
-set folder="..\..\Unique.Id.To.Be.Replaced.UI\bin"
+REM REM  -------========== Unique.Id.To.Be.Replaced.UI ==========-------
 
-cd /d %folder%
+REM set folder="..\..\Unique.Id.To.Be.Replaced.UI\bin"
 
-for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q 2>NUL || del "%%i" /s/q >NUL )
+REM cd /d %folder%
 
-set folder="..\obj"
+REM for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q 2>NUL || del "%%i" /s/q >NUL )
 
-cd /d %folder%
+REM set folder="..\obj"
 
-for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q 2>NUL || del "%%i" /s/q >NUL )
+REM cd /d %folder%
 
-pause
+REM for /F "delims=" %%i in ('dir /b') do (rmdir "%%i" /s/q 2>NUL || del "%%i" /s/q >NUL )
+
+REM pause
